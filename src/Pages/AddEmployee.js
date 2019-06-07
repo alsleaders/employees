@@ -1,22 +1,36 @@
 import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+
+const COMPANYNAME = 'Leaders Imagined'
+const API_URL = 'https://sdg-staff-directory-app.herokuapp.com/api'
 
 export default function Home() {
   // this is where the form is going to get the employee information
 
+  const sendEmployeeData = () => {
+    axios.post(`${API_URL}/${COMPANYNAME}/Employees`, {
+      company: COMPANYNAME
+    })
+  }
+
   return (
     <>
       <h4> Dinna fash</h4>
-      <form>
+      <form onSubmit={() => sendEmployeeData}>
         <input type="text" placeholder="First Name" />
         <input type="text" placeholder="Last Name" />
         <p> Hire Date: </p>
         <input type="date" />
         <p>Birth Date: </p>
         <input type="date" />
-        <p>Is this employee full time? </p>
-        <input type="checkbox" value="full time" checked />
-        <p>Add a profile image </p>
-        <input type="file" name="myImage" />
+        <p>
+          Is this employee full time?
+          <input type="checkbox" value="full time" checked />{' '}
+        </p>
+        <br />
+        <input type="text" placeholder="profile image" />
+        <br />
+        <br />
         <input type="text" placeholder="job title" />
         <input type="text" placeholder="job description" />
         <br />
@@ -40,6 +54,7 @@ export default function Home() {
         <input type="text" placeholder="emergency contact address" />
         <p> PTO Hours </p>
         <input type="number" min="0" max="500" />
+        <button onClick={() => sendEmployeeData} />
       </form>
     </>
   )
