@@ -32,16 +32,18 @@ class PFCInfo extends Component {
   render() {
     return (
       <>
-        <nav>
-          <GoAdd />
-          <GoHome />
-        </nav>
-        <div>
-          <h1>Let's just see if this loads</h1>
-          <h3>
-            {this.state.employee.firstName} {this.state.employee.lastName}
-          </h3>
-        </div>
+        <main>
+          <nav>
+            <GoAdd />
+            <GoHome />
+          </nav>
+          <div>
+            <h1>Let's just see if this loads</h1>
+            <h3>
+              {this.state.employee.firstName} {this.state.employee.lastName}
+            </h3>
+          </div>
+        </main>
       </>
     )
   }

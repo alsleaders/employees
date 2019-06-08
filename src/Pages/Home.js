@@ -18,17 +18,19 @@ export default function Home() {
 
   return (
     <>
-      <h1>Hello, Minions!</h1>
-      <GoAdd />
-      <ul>
-        {employeeList.map(person => {
-          return (
-            <li>
-              <EmployeeBlueprint key={person.index} elephant={person} />
-            </li>
-          )
-        })}
-      </ul>
+      <main>
+        <h1>Hello, Minions!</h1>
+        <GoAdd />
+        <ul>
+          {employeeList.map(person => {
+            return (
+              <li>
+                <EmployeeBlueprint key={person.index} elephant={person} />
+              </li>
+            )
+          })}
+        </ul>
+      </main>
     </>
   )
 }
