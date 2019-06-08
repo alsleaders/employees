@@ -8,12 +8,19 @@ const API_URL = 'https://sdg-staff-directory-app.herokuapp.com/api'
 export default function Home() {
   // this is where the form is going to get the employee information
   const [employee, setEmployee] = useState({})
+  const [error, setError] = useState('')
 
   const sendEmployeeData = event => {
     event.preventDefault()
+    // page resets
+    event.target.reset()
     axios.post(`${API_URL}/${COMPANYNAME}/Employees`, employee).then(resp => {
       console.log({ resp })
-      // setEmployee(oldEmployee => oldEmployee.concat(resp.data))
+      {
+        resp.status !== 200
+          ? setError('You have missed a minion, try again')
+          : setError('Updated!')
+      }
     })
   }
 
@@ -42,44 +49,187 @@ export default function Home() {
             })
           }
         />
-
         <p>Birth Date: </p>
-        <input type="date" />
+        <input
+          type="date"
+          onChange={e =>
+            setEmployee(prevData => {
+              prevData.birthday = e.target.value
+              return prevData
+            })
+          }
+        />
         <p> Hire Date: </p>
-        <input type="date" />
+        <input
+          type="date"
+          onChange={e =>
+            setEmployee(prevData => {
+              prevData.hiredDate = e.target.value
+              return prevData
+            })
+          }
+        />
         <p>
           {/* Is this employee full time?
           <input type="checkbox" value="full time" checked />{' '} */}
         </p>
         <br />
-        <input type="text" placeholder="profile image" />
+        <input
+          type="text"
+          placeholder="profile image"
+          onChange={e =>
+            setEmployee(prevData => {
+              prevData.profileImage = e.target.value
+              return prevData
+            })
+          }
+        />
         <br />
         <br />
-        <input type="text" placeholder="job title" />
-        <input type="text" placeholder="job description" />
+        <input
+          type="text"
+          placeholder="job title"
+          onChange={e =>
+            setEmployee(prevData => {
+              prevData.jobTitle = e.target.value
+              return prevData
+            })
+          }
+        />
+        <input
+          type="text"
+          placeholder="job description"
+          onChange={e =>
+            setEmployee(prevData => {
+              prevData.jobDescription = e.target.value
+              return prevData
+            })
+          }
+        />
         <br />
         <br />
-        <input type="text" placeholder="phone number" />
-        <input type="text" placeholder="address" />
+        <input
+          type="text"
+          placeholder="phone number"
+          onChange={e =>
+            setEmployee(prevData => {
+              prevData.phoneNumber = e.target.value
+              return prevData
+            })
+          }
+        />
+        <input
+          type="text"
+          placeholder="address"
+          onChange={e =>
+            setEmployee(prevData => {
+              prevData.address = e.target.value
+              return prevData
+            })
+          }
+        />
         <br />
         <br />
-        <input type="text" placeholder="city" />
-        <input type="text" placeholder="zip" />
-        <input type="text" placeholder="state" />
+        <input
+          type="text"
+          placeholder="city"
+          onChange={e =>
+            setEmployee(prevData => {
+              prevData.city = e.target.value
+              return prevData
+            })
+          }
+        />
+        <input
+          type="text"
+          placeholder="zip"
+          onChange={e =>
+            setEmployee(prevData => {
+              prevData.zip = e.target.value
+              return prevData
+            })
+          }
+        />
+        <input
+          type="text"
+          placeholder="state"
+          onChange={e =>
+            setEmployee(prevData => {
+              prevData.state = e.target.value
+              return prevData
+            })
+          }
+        />
         <br />
         <p> Salary </p>
-        <input type="number" min="10.5" max="500" />
-        <input type="text" placeholder="gender" />
-        <input type="text" placeholder="email" />
+        <input
+          type="number"
+          min="10.5"
+          max="500"
+          onChange={e =>
+            setEmployee(prevData => {
+              prevData.salary = e.target.value
+              return prevData
+            })
+          }
+        />
+        <input
+          type="text"
+          placeholder="gender"
+          onChange={e =>
+            setEmployee(prevData => {
+              prevData.gender = e.target.value
+              return prevData
+            })
+          }
+        />
+        <input
+          type="text"
+          placeholder="email"
+          onChange={e =>
+            setEmployee(prevData => {
+              prevData.email = e.target.value
+              return prevData
+            })
+          }
+        />
         <br />
         <br />
-        <input type="text" placeholder="emergency contact person" />
-        <input type="text" placeholder="emergency contact phone" />
-        <input type="text" placeholder="emergency contact address" />
+        <input
+          type="text"
+          placeholder="emergency contact person"
+          onChange={e =>
+            setEmployee(prevData => {
+              prevData.emergencyContactPerson = e.target.value
+              return prevData
+            })
+          }
+        />
+        <input
+          type="text"
+          placeholder="emergency contact address"
+          onChange={e =>
+            setEmployee(prevData => {
+              prevData.emergencyContactAddress = e.target.value
+              return prevData
+            })
+          }
+        />
         <p> PTO Hours </p>
-        <input type="number" min="0" max="500" />
+        <input
+          type="number"
+          min="0"
+          max="500"
+          onChange={e =>
+            setEmployee(prevData => {
+              prevData.ptoHours = e.target.value
+              return prevData
+            })
+          }
+        />
         <button onClick={() => sendEmployeeData} />
       </form>
+      {error && <p className="error">{error}</p>}
     </>
   )
 }
