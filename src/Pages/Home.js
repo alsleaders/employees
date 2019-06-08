@@ -16,6 +16,15 @@ export default function Home() {
     })
   }, [])
 
+  const deleteEmployee = employeeID => {
+    axios
+      .delete(`${API_URL}/${COMPANYNAME}/employees/${employeeID}`)
+      .then(resp => {
+        console.log('deleted')
+        setEmployeeList([])
+      })
+  }
+
   return (
     <>
       <main>
@@ -25,7 +34,11 @@ export default function Home() {
           {employeeList.map(person => {
             return (
               <li>
-                <EmployeeBlueprint key={person.index} elephant={person} />
+                <EmployeeBlueprint
+                  key={person.index}
+                  employee={person}
+                  deleteEmployee={person.id}
+                />
               </li>
             )
           })}

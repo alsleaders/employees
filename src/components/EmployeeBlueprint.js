@@ -7,11 +7,14 @@ export default function PFC(props) {
 
   return (
     <>
-      <Link to={`/employee/${props.elephant.id}`}>
+      <Link to={`/employee/${props.employee.id}`}>
         <h4>
-          {props.elephant.firstName} {props.elephant.lastName}
-        </h4>{' '}
+          {props.employee.firstName} {props.employee.lastName}
+        </h4>
       </Link>
+      <button onClick={() => props.deleteEmployee(props.employee.id)}>
+        Delete Employee
+      </button>
     </>
   )
 }

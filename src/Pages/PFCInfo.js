@@ -42,6 +42,17 @@ class PFCInfo extends Component {
             <h3>
               {this.state.employee.firstName} {this.state.employee.lastName}
             </h3>
+            {this.state.employee.birthday} <br />
+            {this.state.employee.hiredDate} <br />
+            {this.state.employee.profileImage} <br />
+            {this.state.employee.jobTitle} <br />
+            {this.state.employee.jobDescription} <br />
+            {this.state.employee.phoneNumber} <br />
+            {this.state.employee.address} <br />
+            {this.state.employee.city} <br />
+            {this.state.employee.zip} <br />
+            {this.state.employee.state} <br />
+            {this.state.employee.salary}
           </div>
         </main>
       </>

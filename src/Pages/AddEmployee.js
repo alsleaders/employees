@@ -16,11 +16,10 @@ export default function Home() {
     event.target.reset()
     axios.post(`${API_URL}/${COMPANYNAME}/Employees`, employee).then(resp => {
       console.log({ resp })
-      {
-        resp.status !== 200
-          ? setError('You have missed a minion, try again')
-          : setError('Updated!')
-      }
+
+      resp.status !== 200
+        ? setError('You have missed a minion, try again')
+        : setError('Updated!')
     })
   }
 
@@ -164,7 +163,7 @@ export default function Home() {
         <p> Salary </p>
         <input
           type="number"
-          min="10.5"
+          min="10"
           max="500"
           onChange={e =>
             setEmployee(prevData => {
