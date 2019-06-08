@@ -1,11 +1,13 @@
 import React from 'react'
 
-export default function Home() {
+export default function PFC(props) {
   // stuff about individual employee
 
   return (
     <>
-      <h3> Dunno what I'm doing</h3>
+      <h4>
+        {props.elephant.firstName} {props.elephant.lastName}
+      </h4>
     </>
   )
 }

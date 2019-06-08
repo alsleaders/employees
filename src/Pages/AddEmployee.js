@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
+import GoHome from '../components/GoHome'
 
 const COMPANYNAME = 'Leaders Imagined'
 const API_URL = 'https://sdg-staff-directory-app.herokuapp.com/api'
@@ -18,6 +19,7 @@ export default function Home() {
 
   return (
     <>
+      <GoHome />
       <h4> Don't worry about it</h4>
       <form onSubmit={sendEmployeeData}>
         <input

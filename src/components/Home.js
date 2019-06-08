@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import PFC from '../Pages/PFC'
+import GoAdd from '../components/GoAdd'
 
 const COMPANYNAME = 'Leaders Imagined'
 const API_URL = 'https://sdg-staff-directory-app.herokuapp.com/api'
+
 export default function Home() {
   const [employeeList, setEmployeeList] = useState([])
 
@@ -11,22 +14,17 @@ export default function Home() {
       console.log(resp.data)
       setEmployeeList(resp.data)
     })
-    // .then(person => {
-    //   console.log(person)
-    //   return person.data.data
-    // })
-  })
-
-  // gonna need a Post for new employees
+  }, [])
 
   return (
     <>
       <h1>Hello, Minions!</h1>
+      <GoAdd />
       <ul>
         {employeeList.map(person => {
           return (
             <li>
-              <PFC key={person.id} />
+              <PFC key={person.index} elephant={person} />
             </li>
           )
         })}
