@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import PFC from '../Pages/PFC'
+import EmployeeBlueprint from '../components/EmployeeBlueprint'
 import GoAdd from '../components/GoAdd'
 
 const COMPANYNAME = 'Leaders Imagined'
@@ -24,7 +24,7 @@ export default function Home() {
         {employeeList.map(person => {
           return (
             <li>
-              <PFC key={person.index} elephant={person} />
+              <EmployeeBlueprint key={person.index} elephant={person} />
             </li>
           )
         })}
