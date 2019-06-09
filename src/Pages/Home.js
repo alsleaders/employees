@@ -40,7 +40,7 @@ export default function Home() {
       <main>
         <h1>Hello, Minions!</h1>
         <GoAdd />
-        <ul>
+        <ul className="wrap-elements">
           {employeeList.map(person => {
             return (
               <li>

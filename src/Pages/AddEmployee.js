@@ -30,50 +30,58 @@ export default function Home() {
         <GoHome />
       </nav>
       <form className="style-form" onSubmit={sendEmployeeData}>
-        <input
-          type="text"
-          placeholder="First Name"
-          onChange={e =>
-            setEmployee(prevData => {
-              prevData.firstName = e.target.value
-              return prevData
-            })
-          }
-        />
-        <input
-          type="text"
-          placeholder="Last Name"
-          onChange={e =>
-            setEmployee(prevData => {
-              prevData.lastName = e.target.value
-              return prevData
-            })
-          }
-        />
-        <p>Birth Date: </p>
-        <input
-          type="date"
-          onChange={e =>
-            setEmployee(prevData => {
-              prevData.birthday = e.target.value
-              return prevData
-            })
-          }
-        />
-        <p> Hire Date: </p>
-        <input
-          type="date"
-          onChange={e =>
-            setEmployee(prevData => {
-              prevData.hiredDate = e.target.value
-              return prevData
-            })
-          }
-        />
-        <p>
-          This employee is full time?{' '}
-          <input type="checkbox" value="full time" checked />{' '}
-        </p>
+        <div className="style-items">
+          <input
+            type="text"
+            placeholder="First Name"
+            onChange={e =>
+              setEmployee(prevData => {
+                prevData.firstName = e.target.value
+                return prevData
+              })
+            }
+          />
+          <input
+            type="text"
+            placeholder="Last Name"
+            onChange={e =>
+              setEmployee(prevData => {
+                prevData.lastName = e.target.value
+                return prevData
+              })
+            }
+          />
+        </div>
+        <div className="style-items">
+          <p>Birth Date: </p>
+          <input
+            type="date"
+            onChange={e =>
+              setEmployee(prevData => {
+                prevData.birthday = e.target.value
+                return prevData
+              })
+            }
+          />
+        </div>
+        <div className="style-items">
+          <p> Hire Date: </p>
+          <input
+            type="date"
+            onChange={e =>
+              setEmployee(prevData => {
+                prevData.hiredDate = e.target.value
+                return prevData
+              })
+            }
+          />
+        </div>
+        <div>
+          <p>
+            This employee is full time?{' '}
+            <input type="checkbox" value="full time" checked />{' '}
+          </p>
+        </div>
         <br />
         <input
           type="text"
