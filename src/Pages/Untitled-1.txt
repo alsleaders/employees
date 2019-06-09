@@ -3,7 +3,6 @@
  - cut off time from date
  - edit button
  x boolean inputs
- - background gif
+ x background gif
  - make the add employee page look better
- - make the time display differently
- - sort picture problems
+ ------- sort picture problems

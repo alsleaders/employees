@@ -5,16 +5,20 @@
 html {
   height: 100%;
   background: #172121;
-  color: #273043;
+  color: #d9f0ff;
 }
 
 body {
   /* margin: 2rem; */
   /* border-radius: 2rem; */
   min-height: 100%;
-  background: #d9f0ff;
+  /* background: #d9f0ff; */
   border: inset 0.1rem #6f73d2;
-  background: url ('https://giphy.com/gifs/TxVVB6PfWMjE4/html5');
+  background: url('./images/spacegiphy.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 80%;
+  /* 'https://giphy.com/gifs/TxVVB6PfWMjE4/html5'); */
   /* ('https://giphy.com/embed/TxVVB6PfWMjE4'); */
   /* width= '480'
     height= '306' frameBorder= '0' class= 'giphy-embed'
@@ -26,15 +30,15 @@ ul {
   list-style: none;
   margin: 2rem;
   padding: 0;
-  background: #83c9f4;
-  border: inset 0.1rem #7681b3;
+  background: #223f47;
+  border: inset 0.1rem #92b8ff;
 }
 
 ul li {
   margin: 0.5rem;
   padding: 0 0.25rem 0.5rem 0.25rem;
-  background: #a3d5ff;
-  border: outset 0.1rem #7681b3;
+  background: #223f47;
+  border: outset 0.1rem #92b8ff;
 }
 
 button {
@@ -42,6 +46,9 @@ button {
   height: 2rem;
 }
 
+input {
+  margin: 0.1rem;
+}
 main {
   padding: 1rem;
   margin: 1rem;
@@ -55,7 +62,7 @@ main {
   padding: 1rem;
   margin: 1rem;
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: left;
   align-items: center;
