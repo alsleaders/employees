@@ -11,7 +11,11 @@ body {
   margin: 2rem;
   border-radius: 2rem;
   min-height: 100%;
-  background: lightgray;
+  background-image: url('https://giphy.com/embed/TxVVB6PfWMjE4');
+  /* width= '480'
+    height= '306' frameBorder= '0' class= 'giphy-embed'
+    allowFullScreen></iframe><p><a href=
+    'https://giphy.com/gifs/twitter-profile-simple-TxVVB6PfWMjE4'  */
 }
 
 ul {
