@@ -1,4 +1,4 @@
- - delete button
+ x delete button
  - edit button
  x why isn't the message displaying now?
  - 

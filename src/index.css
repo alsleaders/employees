@@ -16,11 +16,13 @@ body {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 button {
-  width: 3rem;
-  height: 1.5rem;
+  width: 4rem;
+  height: 2rem;
 }
 
 main {
@@ -30,4 +32,34 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.style-form {
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  /* width: 30%; */
+}
+
+.profileImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.navBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navBar > div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 10rem;
 }

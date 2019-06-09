@@ -21,7 +21,17 @@ export default function Home() {
       .delete(`${API_URL}/${COMPANYNAME}/employees/${employeeID}`)
       .then(resp => {
         console.log('deleted')
-        setEmployeeList([])
+        setEmployeeList(oldList =>
+          oldList.filter(employee => employee.id !== employeeID)
+        )
+      })
+  }
+
+  const editEmployee = employeeID => {
+    axios
+      .put(`${API_URL}/${COMPANYNAME}/employees/${employeeID}`)
+      .then(resp => {
+        console.log('edited')
       })
   }
 
@@ -37,8 +47,14 @@ export default function Home() {
                 <EmployeeBlueprint
                   key={person.index}
                   employee={person}
-                  deleteEmployee={person.id}
+                  // deleteEmployee={person.id}
                 />
+                <div className="navBar">
+                  <button onClick={() => editEmployee(person.id)}>Edit</button>
+                  <button onClick={() => deleteEmployee(person.id)}>
+                    Delete
+                  </button>
+                </div>
               </li>
             )
           })}

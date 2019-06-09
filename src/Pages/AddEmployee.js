@@ -25,9 +25,11 @@ export default function Home() {
 
   return (
     <>
-      <GoHome />
-      <h4> Don't worry about it</h4>
-      <form onSubmit={sendEmployeeData}>
+      <nav className="navBar">
+        <h4>Add Employee Information</h4>
+        <GoHome />
+      </nav>
+      <form className="style-form" onSubmit={sendEmployeeData}>
         <input
           type="text"
           placeholder="First Name"
@@ -117,6 +119,7 @@ export default function Home() {
             })
           }
         />
+        <br />
         <input
           type="text"
           placeholder="address"
@@ -127,8 +130,6 @@ export default function Home() {
             })
           }
         />
-        <br />
-        <br />
         <input
           type="text"
           placeholder="city"
@@ -206,6 +207,16 @@ export default function Home() {
         />
         <input
           type="text"
+          placeholder="emergency contact phone"
+          onChange={e =>
+            setEmployee(prevData => {
+              prevData.emergencyContactPhone = e.target.value
+              return prevData
+            })
+          }
+        />
+        <input
+          type="text"
           placeholder="emergency contact address"
           onChange={e =>
             setEmployee(prevData => {
@@ -226,7 +237,7 @@ export default function Home() {
             })
           }
         />
-        <button onClick={() => sendEmployeeData} />
+        <button onClick={() => sendEmployeeData}>Submit</button>
       </form>
       {error && <p className="error">{error}</p>}
     </>

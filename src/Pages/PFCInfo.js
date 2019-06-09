@@ -24,27 +24,27 @@ class PFCInfo extends Component {
           employee: resp.data
         })
       })
-    // .then(results => {
-    //   console.log({ results })
-    // })
   }
 
   render() {
     return (
       <>
         <main>
-          <nav>
+          <nav className="navBar">
             <GoAdd />
             <GoHome />
           </nav>
           <div>
-            <h1>Let's just see if this loads</h1>
-            <h3>
-              {this.state.employee.firstName} {this.state.employee.lastName}
-            </h3>
+            <h2>
+              {this.state.employee.firstName} {this.state.employee.lastName}'s
+              information
+            </h2>
+            <div className="profileImage">
+              <img src={this.state.employee.profileImage} />
+            </div>
+            <br />
             {this.state.employee.birthday} <br />
             {this.state.employee.hiredDate} <br />
-            {this.state.employee.profileImage} <br />
             {this.state.employee.jobTitle} <br />
             {this.state.employee.jobDescription} <br />
             {this.state.employee.phoneNumber} <br />
@@ -53,6 +53,15 @@ class PFCInfo extends Component {
             {this.state.employee.zip} <br />
             {this.state.employee.state} <br />
             {this.state.employee.salary}
+            <br />
+            {this.state.employee.gender} <br />
+            {this.state.employee.email} <br />
+            {this.state.employee.emergencyContactPerson} <br />
+            {this.state.employee.emergencyContactPhone} <br />
+            {this.state.employee.emergencyContactAddress} <br />
+            {this.state.employee.firstName} has {this.state.employee.ptoHours}{' '}
+            hours of PTO available
+            <br />
           </div>
         </main>
       </>
