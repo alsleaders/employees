@@ -71,8 +71,8 @@ export default function Home() {
           }
         />
         <p>
-          {/* Is this employee full time?
-          <input type="checkbox" value="full time" checked />{' '} */}
+          This employee is full time?{' '}
+          <input type="checkbox" value="full time" checked />{' '}
         </p>
         <br />
         <input
@@ -237,9 +237,11 @@ export default function Home() {
             })
           }
         />
+        <div className="be-centered">
+          {error && <p className="error">{error}</p>}
+        </div>
         <button onClick={() => sendEmployeeData}>Submit</button>
       </form>
-      {error && <p className="error">{error}</p>}
     </>
   )
 }

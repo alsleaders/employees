@@ -4,14 +4,18 @@
 
 html {
   height: 100%;
-  background: cornflowerblue;
+  background: #172121;
+  color: #273043;
 }
 
 body {
-  margin: 2rem;
-  border-radius: 2rem;
+  /* margin: 2rem; */
+  /* border-radius: 2rem; */
   min-height: 100%;
-  background-image: url('https://giphy.com/embed/TxVVB6PfWMjE4');
+  background: #d9f0ff;
+  border: inset 0.1rem #6f73d2;
+  background: url ('https://giphy.com/gifs/TxVVB6PfWMjE4/html5');
+  /* ('https://giphy.com/embed/TxVVB6PfWMjE4'); */
   /* width= '480'
     height= '306' frameBorder= '0' class= 'giphy-embed'
     allowFullScreen></iframe><p><a href=
@@ -20,8 +24,17 @@ body {
 
 ul {
   list-style: none;
-  margin: 0;
+  margin: 2rem;
   padding: 0;
+  background: #83c9f4;
+  border: inset 0.1rem #7681b3;
+}
+
+ul li {
+  margin: 0.5rem;
+  padding: 0 0.25rem 0.5rem 0.25rem;
+  background: #a3d5ff;
+  border: outset 0.1rem #7681b3;
 }
 
 button {
@@ -48,6 +61,15 @@ main {
   /* width: 30%; */
 }
 
+h2 {
+  color: #9197ae;
+}
+
+h4 {
+  color: #9197ae;
+  text-align: center;
+}
+
 .profileImage {
   display: flex;
   flex-direction: column;
@@ -66,4 +88,24 @@ main {
   justify-content: space-around;
   align-items: center;
   width: 10rem;
+}
+
+.emergency-contact {
+  color: #9197ae;
+}
+
+.error {
+  color: #9197ae;
+}
+
+.job-description {
+  margin: 1rem 0;
+}
+
+.be-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
 }

@@ -50,7 +50,7 @@ export default function Home() {
                   // deleteEmployee={person.id}
                 />
                 <div className="navBar">
-                  <button onClick={() => editEmployee(person.id)}>Edit</button>
+                  {/* <button onClick={() => editEmployee(person.id)}>Edit</button> */}
                   <button onClick={() => deleteEmployee(person.id)}>
                     Delete
                   </button>
