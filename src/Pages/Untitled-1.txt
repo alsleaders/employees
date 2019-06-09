@@ -1,6 +1,6 @@
  x delete button
  x why isn't the message displaying now?
- - cut off time from date
+ x cut off time from date
  - edit button
  x boolean inputs
  x background gif
