@@ -187,7 +187,7 @@ export default function Home() {
                 })
               }
             />{' '}
-            per year{'  '}
+            k per year{'  '}
           </p>
         </div>
         <div className="style-items">

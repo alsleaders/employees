@@ -35,7 +35,7 @@ class PFCInfo extends Component {
             <GoAdd />
             <GoHome />
           </nav>
-          <div>
+          <div className="body-of-info">
             <h2>
               {this.state.employee.firstName} {this.state.employee.lastName}'s
               information
@@ -45,18 +45,16 @@ class PFCInfo extends Component {
             </div> */}
             <br />
             Birthday -{' '}
-            <Moment MMM Do YYYY>
-              {this.state.employee.birthday}
-            </Moment>
+            <Moment format="MMM Do YYYY">{this.state.employee.birthday}</Moment>
             <br />
             Hire Date -{' '}
-            <Moment MMM Do YYYY>
+            <Moment format="MMM Do YYYY">
               {this.state.employee.hiredDate}
             </Moment>
             <br />
             <div className="job-description">
-              {this.state.employee.jobTitle} <br />
-              {this.state.employee.jobDescription} <br />
+              <h3>{this.state.employee.jobTitle}</h3> <br />
+              <h3>{this.state.employee.jobDescription}</h3> <br />
             </div>
             {this.state.employee.phoneNumber} <br />
             {this.state.employee.address} <br />
@@ -73,6 +71,11 @@ class PFCInfo extends Component {
             {this.state.employee.emergencyContactAddress} <br />
             {this.state.employee.firstName} has {this.state.employee.ptoHours}{' '}
             hours of PTO available
+            {parseInt(this.state.employee.ptoHours) > 40 ? (
+              <h3>Make her take a vacation!</h3>
+            ) : (
+              ''
+            )}
             <br />
           </div>
         </main>

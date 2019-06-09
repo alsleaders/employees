@@ -18,19 +18,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 80%;
-  /* 'https://giphy.com/gifs/TxVVB6PfWMjE4/html5'); */
-  /* ('https://giphy.com/embed/TxVVB6PfWMjE4'); */
-  /* width= '480'
-    height= '306' frameBorder= '0' class= 'giphy-embed'
-    allowFullScreen></iframe><p><a href=
-    'https://giphy.com/gifs/twitter-profile-simple-TxVVB6PfWMjE4'  */
 }
 
 ul {
   list-style: none;
   margin: 2rem;
   padding: 0;
-  background: #223f47;
+  /* background: #223f47; */
   border: inset 0.1rem #92b8ff;
 }
 
@@ -49,6 +43,7 @@ button {
 input {
   margin: 0.1rem;
 }
+
 main {
   padding: 1rem;
   margin: 1rem;
@@ -66,7 +61,6 @@ main {
   flex-wrap: wrap;
   justify-content: left;
   align-items: center;
-  /* width: 30%; */
 }
 
 .style-items {
@@ -82,7 +76,11 @@ h2 {
   color: #9197ae;
 }
 
-h4 {
+h3 {
+  color: #9197ae;
+}
+
+.display-names {
   color: #9197ae;
   text-align: center;
 }
@@ -132,4 +130,8 @@ h4 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.body-of-info {
+  text-align: justify;
 }

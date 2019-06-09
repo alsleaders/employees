@@ -38,7 +38,8 @@ export default function Home() {
   return (
     <>
       <main>
-        <h1>Hello, Scientists!</h1>
+        <h1>Welcome to Leaders Imagined!</h1>
+        <h2>Here are the Scientists who work for us</h2>
         <GoAdd />
         <ul className="wrap-elements">
           {employeeList.map(person => {

@@ -4,5 +4,5 @@
  - edit button
  x boolean inputs
  x background gif
- - make the add employee page look better
+ x make the add employee page look better
  ------- sort picture problems
